@@ -1,0 +1,12 @@
+node_modules/
+release/
+*.zip
+*.tmp
+tests/scene-preview.svg
+tests/scene-preview.png
+
+tests/*-preview/
+tests/weapon-preview/
+tests/*-review*.png
+tests/*.svg
+tests/*.png

@@ -1,0 +1,16 @@
+{
+  "studio_version": "1.6.0-rc1",
+  "selection": "Generic component source only; no story projects or personal characters",
+  "sha256": {
+    "vendor/studio/puppet.js": "9af6b450de290063c5a161e5c851f28590bb62342d40d7355b70f096efa550c8",
+    "vendor/studio/stagecraft.js": "e65809608d358839e9ebb4fbe4037984fb0fe1a9431cf4472ede335e3b3a3e0c",
+    "vendor/studio/core.js": "934d315cc0f6c0445e7d19dc34a3703c20f7210ed506eec90781483bd48ab8c1",
+    "vendor/studio/puppet-actions.js": "92df35d665297a75b91a7ae87510c55e811f204ac9730e5477cdf4ea61a95c92",
+    "vendor/studio/scene-effects.js": "5eeb61bc2ea346b0caa9b895d46de60e22b39137792161d32d96a3f66080c626",
+    "vendor/studio/scene-props.js": "1d9e09df4318c38df06c46c2492dbbd4f8def8a18ff952a3f0d10affa637c63b",
+    "vendor/studio/scene-library.js": "e590272a63cb8d1c7e72631fc9c7c0d6c124522c084c9b98a2f36e7608544dc2",
+    "vendor/studio/scene-backgrounds.js": "feec7409d19ee987a7179e39ff375975d099fb64e3939d924b0deac1a1e69e52"
+  },
+  "inkjs": "2.4.0 from npm registry",
+  "original_component_license": "GPL-3.0-only"
+}

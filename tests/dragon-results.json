@@ -1,0 +1,25 @@
+{
+  "ordinaryRuns": 1000,
+  "ordinaryEndings": {
+    "save_god": {
+      "god_saved": 500
+    },
+    "side_alchemist": {
+      "god_dead": 500
+    }
+  },
+  "mixedRuns": 4000,
+  "mixedDecisions": 53384,
+  "visitedScenes": 19,
+  "selectedActions": 47,
+  "spellsUsed": [
+    "shield_of_faith",
+    "shocking_grasp",
+    "comprehend_languages",
+    "magic_missile",
+    "guiding_bolt",
+    "sleep",
+    "command"
+  ],
+  "checksWithBothOutcomes": 20
+}

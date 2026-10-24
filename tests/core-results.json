@@ -1,0 +1,13 @@
+{
+  "passed": 13,
+  "scope": "Engine and compiled Ink integration; not visual browser QA",
+  "abilityCoverage": [
+    "guiding_bolt",
+    "shocking_grasp",
+    "magic_missile",
+    "shield_of_faith",
+    "command",
+    "sleep",
+    "comprehend_languages"
+  ]
+}

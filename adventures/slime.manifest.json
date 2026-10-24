@@ -1,0 +1,1202 @@
+{
+  "id": "the-slime-queens-offer",
+  "version": 1,
+  "title": "The Slime Queen\u2019s Offer",
+  "summary": "A Heroes Guild commission leads to a village inside living slime, a mountain sanctuary, and an offer of endless love. Choose whether to free the villagers or accept the Slime Queen\u2019s gift. Includes Giant and Illusory Duplicate, nine supported abilities, and nonmagical routes.",
+  "entry": "guild",
+  "supportedAbilities": [
+    "guiding_bolt",
+    "shocking_grasp",
+    "magic_missile",
+    "shield_of_faith",
+    "command",
+    "sleep",
+    "comprehend_languages",
+    "giant",
+    "illusory_duplicate"
+  ],
+  "nodes": {
+    "guild": {
+      "title": "The Commission",
+      "text": "The Heroes Guild sends you to the village of Valeglass. Green slime has crept down from a mountain spring. Marshal Orlan asks you to find the missing residents and stop the source. He offers no reward for killing the villagers: bring them home, if you can.",
+      "background": "medieval-village",
+      "actions": [
+        "accept"
+      ]
+    },
+    "village": {
+      "title": "Someone Inside",
+      "text": "A translucent shape crosses the square. Inside it is a woman, walking with her eyes open and her hands pressed against the membrane. A baker recognizes her as his sister Mira. Her voice emerges with a chorus behind it: We are loved. Her fingers keep scratching toward the sunlight.",
+      "background": "medieval-village",
+      "actions": [
+        "approach",
+        "observe"
+      ]
+    },
+    "membrane": {
+      "title": "Free Mira",
+      "text": "The slime lashes at anyone who reaches for Mira. Cut or disrupt the outer membrane, not the woman inside it. Its AC is 10 and it has 8 HP. Each surviving response deals 1 fixed damage.",
+      "background": "medieval-village",
+      "actions": [
+        "membrane_attack",
+        "membrane_guiding_bolt",
+        "membrane_shocking_grasp",
+        "membrane_magic_missile",
+        "membrane_giant",
+        "membrane_illusory_duplicate",
+        "membrane_ward",
+        "sleep_membrane",
+        "retreat_membrane"
+      ]
+    },
+    "mira": {
+      "title": "A Voice of Her Own",
+      "text": "Mira falls free. She says the warmth inside was real, but so was her wish to leave. The baker binds your wounds with clean cloth and gives you water. She points to the mountain: the queen lives where the spring begins.",
+      "background": "medieval-village",
+      "actions": [
+        "bandage",
+        "decline_aid"
+      ]
+    },
+    "path": {
+      "title": "The Mountain Is Still a Mountain",
+      "text": "A long stone stair coils around the mountain to the sanctuary at its summit. A trail of green slime runs over its lower steps. You can ascend on foot, or cast Giant to briefly grow large enough to step straight onto the summit.",
+      "background": "mountain-pass",
+      "actions": [
+        "giant_step",
+        "take_trail"
+      ]
+    },
+    "trail": {
+      "title": "The Slime on the Stair",
+      "text": "A long stone stair winds around the mountain. Halfway up, another villager stands inside a living slime membrane, blocking the narrow path. Break the 4-HP membrane without striking the person inside. Its AC is 10; each surviving response deals 1 fixed damage. Giant could have bypassed this encounter.",
+      "background": "mountain-pass",
+      "actions": [
+        "trail_attack",
+        "trail_guiding_bolt",
+        "trail_shocking_grasp",
+        "trail_magic_missile",
+        "trail_giant",
+        "trail_illusory_duplicate",
+        "trail_ward",
+        "trail_command",
+        "trail_retreat"
+      ]
+    },
+    "gate": {
+      "title": "Two Places at Once",
+      "text": "Two pressure plates flank the sanctuary door. Both must be pressed at once. A stone cart lies nearby, and a carved inscription runs around the threshold. Your magical duplicate can briefly exert enough force on a plate in this adventure.",
+      "background": "ancient-temple",
+      "actions": [
+        "read_inscription",
+        "duplicate_gate",
+        "cart_gate"
+      ]
+    },
+    "inscription": {
+      "title": "The Original Covenant",
+      "text": "The inscription promises refuge to willing travelers, and a road home for anyone who wishes to leave. Beneath it, a newer layer of slime covers the word willing. You now have a concrete question to put to the queen, not proof of what she will answer.",
+      "background": "ancient-temple",
+      "actions": [
+        "back_to_gate"
+      ]
+    },
+    "audience": {
+      "title": "The Slime Queen",
+      "text": "A woman of luminous green slime rises from the spring. She calls herself Queen Liora. She claims her cloak grants overwhelming love and an undead life that never ends through aging. She offers you Illusory Duplicate and Command if you join her and defeat Marshal Orlan, allowing her to spread through Valeglass. You have not accepted anything yet.",
+      "background": "ancient-temple",
+      "actions": [
+        "ask_freedom",
+        "cite_covenant",
+        "choose_side"
+      ]
+    },
+    "answer": {
+      "title": "Love Without an Exit",
+      "text": "Liora says anyone who truly feels her love would never want to leave. You ask about those who do. She calls that desire a wound she can heal by holding them closer. She may believe her promise, but she will not offer an exit.",
+      "background": "ancient-temple",
+      "actions": [
+        "weigh_answer"
+      ]
+    },
+    "decision": {
+      "title": "What You Will Permit",
+      "text": "Refusing means fighting Liora to break her hold. Accepting means receiving her cloak and fighting the guild that protects the village. This is a choice about other people\u2019s freedom as well as your own. Neither path is chosen for you.",
+      "background": "ancient-temple",
+      "actions": [
+        "refuse_queen",
+        "accept_queen"
+      ]
+    },
+    "cloak": {
+      "title": "The Gift and the Price",
+      "text": "Warm green light folds around you. The queen\u2019s chorus joins your thoughts, but you retain your present choices. Her gift provides two adventure-only charges shared between Command and Illusory Duplicate. It does not alter your exported character or refill your personal spell charges. She sends you back to face Marshal Orlan.",
+      "background": "ancient-temple",
+      "actions": [
+        "receive_cloak",
+        "decline_gift"
+      ]
+    },
+    "queen_command": {
+      "title": "Her First Charge: Kneel",
+      "text": "Liora raises one hand and orders you to kneel. Her voice tightens around your muscles. This uses the first of her two spell charges. Resist now; failure costs this exchange and lets her strike for 2 fixed damage. Her Command will not repeat indefinitely.",
+      "background": "ancient-temple",
+      "actions": [
+        "resist_command",
+        "counter_command",
+        "shield_command"
+      ]
+    },
+    "queen_double": {
+      "title": "Her Last Charge: A Second Queen",
+      "text": "Liora spends her last charge on a duplicate. Two queens advance. One is a brief decoy, not a second enemy with its own health. It can absorb one attack, including Magic Missile. You can read the ripples beneath them or make it vanish by striking. After this exchange, she has no spell charges left.",
+      "background": "ancient-temple",
+      "actions": [
+        "read_ripples",
+        "break_decoy",
+        "missile_decoy"
+      ]
+    },
+    "queen_battle": {
+      "title": "The Queen Without Her Spells",
+      "text": "With both spell charges spent, Liora fights with lashes of slime. She has 12 HP and AC 11. Each surviving counterattack deals 2 fixed damage. Defeat her to break the village\u2019s bond, or withdraw while you can.",
+      "background": "ancient-temple",
+      "actions": [
+        "queen_battle_attack",
+        "queen_battle_guiding_bolt",
+        "queen_battle_shocking_grasp",
+        "queen_battle_magic_missile",
+        "queen_battle_giant",
+        "queen_battle_illusory_duplicate",
+        "queen_battle_ward",
+        "sleep_queen",
+        "queen_retreat"
+      ]
+    },
+    "marshal": {
+      "title": "The Guild Will Not Step Aside",
+      "text": "Marshal Orlan meets you in Valeglass. He sees the queen\u2019s cloak and raises his staff. He refuses to abandon the villagers. You can still withdraw rather than attack. If you fight, his first response will be an 8-fixed-damage Guiding Bolt. Prepare or interrupt it before trading blows.",
+      "background": "medieval-village",
+      "actions": [
+        "face_bolt",
+        "leave_cloak"
+      ]
+    },
+    "marshal_bolt": {
+      "title": "Aimed Radiance",
+      "text": "Orlan\u2019s staff shines: Guiding Bolt is coming. This authored encounter uses a Dexterity defense check against DC 11, not a separate hidden enemy attack roll. Failure takes 8 fixed damage. A successful magical interruption avoids the bolt.",
+      "background": "medieval-village",
+      "actions": [
+        "dodge_bolt",
+        "illusory_duplicate_bolt",
+        "command_bolt",
+        "ward_bolt"
+      ]
+    },
+    "marshal_missile": {
+      "title": "Seeking Force",
+      "text": "Orlan spends his final spell charge on Magic Missile. The bolts seek you around ordinary cover and deal 5 fixed damage. A successful duplicate or Command can stop this particular volley; a ward can absorb it. You can also endure it if you have enough health.",
+      "background": "medieval-village",
+      "actions": [
+        "endure_missiles",
+        "illusory_duplicate_missiles",
+        "command_missiles",
+        "ward_missiles"
+      ]
+    },
+    "marshal_battle": {
+      "title": "The Last Defender",
+      "text": "Orlan\u2019s two spell charges are spent. He fights with his staff: 12 HP, AC 11, and 1 fixed damage per surviving counterattack. The villagers watch from behind closed doors. Winning this fight gives the queen the unopposed village she demanded.",
+      "background": "medieval-village",
+      "actions": [
+        "marshal_battle_attack",
+        "marshal_battle_guiding_bolt",
+        "marshal_battle_shocking_grasp",
+        "marshal_battle_magic_missile",
+        "marshal_battle_giant",
+        "marshal_battle_illusory_duplicate",
+        "marshal_battle_ward",
+        "command_opening",
+        "marshal_retreat"
+      ]
+    },
+    "freedom": {
+      "title": "The Road Home",
+      "text": "The mountain spring releases its hold. In Valeglass, the membranes loosen and people find their own voices. Some weep for the warmth they lost; others run into waiting arms. No one has to agree about the queen to be free of her. You return with a village that can choose for itself.",
+      "background": "medieval-village",
+      "actions": []
+    },
+    "embrace": {
+      "title": "A Village in Her Arms",
+      "text": "Orlan falls, and green light flows through Valeglass. Liora welcomes you as her champion. The villagers no longer age inside her cloak, and the chorus says they are loved. The road out remains open in stone, but not in her promise. You have won the queen\u2019s victory. Whether it was the village\u2019s is another question.",
+      "background": "medieval-village",
+      "actions": []
+    },
+    "withdrawal": {
+      "title": "An Unfinished Choice",
+      "text": "You leave the confrontation alive. The queen still holds the village\u2019s future, and your commission remains unfinished. Retreat is an outcome, not a secret victory. You may start a new journey with another plan.",
+      "background": "medieval-village",
+      "actions": []
+    },
+    "defeat": {
+      "title": "The Journey Ends",
+      "text": "You cannot continue the fight. Your health is gone, and the village\u2019s fate passes beyond this attempt. Your choices and honest rolls remain in the journal. Start a fresh run to try another approach.",
+      "background": "medieval-village",
+      "actions": []
+    }
+  },
+  "actions": {
+    "accept": {
+      "label": "Accept the commission and travel to Valeglass.",
+      "success": "village",
+      "failure": "village",
+      "victory": "village",
+      "defeat": "defeat"
+    },
+    "approach": {
+      "label": "Approach the moving membrane carefully.",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "membrane",
+      "defeat": "defeat"
+    },
+    "observe": {
+      "label": "Watch its movements before approaching. (WIS / Perception, DC 10)",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "membrane",
+      "defeat": "defeat",
+      "check": {
+        "ability": "WIS",
+        "dc": 10,
+        "proficiency": "Perception"
+      },
+      "flag": "saw_mira",
+      "successText": "You see Mira pull against the slime. Whatever she feels, she is not moving freely.",
+      "failureText": "The shifting surface hides her expression. You still know a person is inside."
+    },
+    "membrane_attack": {
+      "label": "Attack the Possessing slime membrane with your weapon. (4 fixed damage; AC 10)",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "mira",
+      "defeat": "defeat",
+      "enemy": "membrane",
+      "damage": 4,
+      "retaliation": 1,
+      "check": {
+        "ability": "weapon",
+        "proficiency": "weapon",
+        "dc": 10,
+        "targetType": "AC"
+      },
+      "successText": "Your weapon strikes the intended target.",
+      "failureText": "Your strike misses; the enemy responds."
+    },
+    "membrane_guiding_bolt": {
+      "label": "Cast Guiding Bolt. (8 fixed damage; AC 10)",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "mira",
+      "defeat": "defeat",
+      "spell": "guiding_bolt",
+      "enemy": "membrane",
+      "damage": 8,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "WIS",
+        "dc": 10,
+        "targetType": "AC"
+      }
+    },
+    "membrane_shocking_grasp": {
+      "label": "Cast Shocking Grasp. (5 fixed damage; AC 10)",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "mira",
+      "defeat": "defeat",
+      "spell": "shocking_grasp",
+      "enemy": "membrane",
+      "damage": 5,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "INT",
+        "dc": 10,
+        "targetType": "AC"
+      }
+    },
+    "membrane_magic_missile": {
+      "label": "Cast Magic Missile. (Automatic 5 fixed damage)",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "mira",
+      "defeat": "defeat",
+      "spell": "magic_missile",
+      "enemy": "membrane",
+      "damage": 5,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false
+    },
+    "membrane_giant": {
+      "label": "Grow for one empowered strike. (CON DC 11; 8 fixed damage)",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "mira",
+      "defeat": "defeat",
+      "spell": "giant",
+      "enemy": "membrane",
+      "damage": 8,
+      "retaliation": 1,
+      "successText": "For this one strike you tower above the enemy: 4 base plus 4 bonus fixed damage. You immediately return to normal size.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "CON",
+        "dc": 11,
+        "targetType": "DC"
+      }
+    },
+    "membrane_illusory_duplicate": {
+      "label": "Attack behind a duplicate. (WIS DC 11; 4 fixed damage; block response)",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "mira",
+      "defeat": "defeat",
+      "spell": "illusory_duplicate",
+      "enemy": "membrane",
+      "damage": 4,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": true,
+      "check": {
+        "ability": "WIS",
+        "dc": 11,
+        "targetType": "DC"
+      }
+    },
+    "membrane_ward": {
+      "label": "Cast Shield of Faith. (Block the next damaging event here.)",
+      "success": "membrane",
+      "failure": "membrane",
+      "victory": "membrane",
+      "defeat": "defeat",
+      "spell": "shield_of_faith",
+      "successText": "A ward forms. It expires when you leave this encounter."
+    },
+    "sleep_membrane": {
+      "label": "Cast Sleep on the living slime. (INT DC 11)",
+      "success": "mira",
+      "failure": "membrane",
+      "victory": "mira",
+      "defeat": "defeat",
+      "spell": "sleep",
+      "check": {
+        "ability": "INT",
+        "dc": 11
+      },
+      "failureDamage": 1,
+      "successText": "The living membrane goes slack. Mira crawls out before it wakes.",
+      "failureText": "The slime resists and lashes you for 1 fixed damage."
+    },
+    "retreat_membrane": {
+      "label": "Retreat and guide the baker away from the square.",
+      "success": "path",
+      "failure": "path",
+      "victory": "path",
+      "defeat": "defeat",
+      "successText": "Mira remains inside the slime. You can still stop the source on the mountain."
+    },
+    "bandage": {
+      "label": "Accept first aid. (Restore 2 HP once.)",
+      "success": "path",
+      "failure": "path",
+      "victory": "path",
+      "defeat": "defeat",
+      "heal": 2,
+      "once": true,
+      "flag": "mira_free"
+    },
+    "giant_step": {
+      "label": "Cast Giant and step onto the shelf. (CON DC 11)",
+      "success": "gate",
+      "failure": "trail",
+      "victory": "gate",
+      "defeat": "defeat",
+      "spell": "giant",
+      "check": {
+        "ability": "CON",
+        "dc": 11
+      },
+      "successText": "The mountain becomes a ledge for a moment. You step up and shrink safely on the shelf.",
+      "failureText": "You cannot sustain the growth. The charge is spent; you take the trail instead."
+    },
+    "take_trail": {
+      "label": "Ascend the winding mountain stair.",
+      "success": "trail",
+      "failure": "trail",
+      "victory": "trail",
+      "defeat": "defeat"
+    },
+    "read_inscription": {
+      "label": "Cast Comprehend Languages on the threshold.",
+      "success": "inscription",
+      "failure": "inscription",
+      "victory": "inscription",
+      "defeat": "defeat",
+      "spell": "comprehend_languages",
+      "once": true,
+      "flag": "covenant_read"
+    },
+    "duplicate_gate": {
+      "label": "Cast Illusory Duplicate on the second plate. (WIS DC 10)",
+      "success": "audience",
+      "failure": "gate",
+      "victory": "audience",
+      "defeat": "defeat",
+      "spell": "illusory_duplicate",
+      "check": {
+        "ability": "WIS",
+        "dc": 10
+      },
+      "successText": "Your double presses the second plate. You enter before it fades.",
+      "failureText": "The double flickers before it can hold the plate. Nothing opens."
+    },
+    "cart_gate": {
+      "label": "Roll the stone cart onto one plate and stand on the other.",
+      "success": "audience",
+      "failure": "audience",
+      "victory": "audience",
+      "defeat": "defeat",
+      "successText": "The counterbalanced door opens. You wedge it with the cart before stepping through."
+    },
+    "back_to_gate": {
+      "label": "Return to the pressure plates.",
+      "success": "gate",
+      "failure": "gate",
+      "victory": "gate",
+      "defeat": "defeat"
+    },
+    "ask_freedom": {
+      "label": "Ask whether someone can choose to leave her love.",
+      "success": "answer",
+      "failure": "answer",
+      "victory": "answer",
+      "defeat": "defeat"
+    },
+    "cite_covenant": {
+      "label": "Show her the covenant\u2019s promise of a road home.",
+      "success": "answer",
+      "failure": "answer",
+      "victory": "answer",
+      "defeat": "defeat",
+      "requiresFlag": "covenant_read"
+    },
+    "choose_side": {
+      "label": "Consider the two paths.",
+      "success": "decision",
+      "failure": "decision",
+      "victory": "decision",
+      "defeat": "defeat"
+    },
+    "weigh_answer": {
+      "label": "Make your decision.",
+      "success": "decision",
+      "failure": "decision",
+      "victory": "decision",
+      "defeat": "defeat"
+    },
+    "refuse_queen": {
+      "label": "Refuse: free the village from the queen\u2019s control.",
+      "success": "queen_command",
+      "failure": "queen_command",
+      "victory": "queen_command",
+      "defeat": "defeat",
+      "flag": "opposed_queen"
+    },
+    "accept_queen": {
+      "label": "Accept: join the queen and challenge the guild.",
+      "success": "cloak",
+      "failure": "cloak",
+      "victory": "cloak",
+      "defeat": "defeat",
+      "flag": "joined_queen"
+    },
+    "receive_cloak": {
+      "label": "Receive the two-charge gift and return to Valeglass.",
+      "success": "marshal",
+      "failure": "marshal",
+      "victory": "marshal",
+      "defeat": "defeat",
+      "once": true,
+      "grantBoon": {
+        "spells": [
+          "command",
+          "illusory_duplicate"
+        ],
+        "charges": 2
+      }
+    },
+    "resist_command": {
+      "label": "Resist her Command. (WIS / WIS Saving Throw, DC 11)",
+      "success": "queen_double",
+      "failure": "queen_double",
+      "victory": "queen_double",
+      "defeat": "defeat",
+      "check": {
+        "ability": "WIS",
+        "dc": 11,
+        "proficiency": "WIS Saving Throw"
+      },
+      "failureDamage": 2,
+      "successText": "You stay on your feet and force your way through the command.",
+      "failureText": "Your knees buckle. She strikes for 2 fixed damage while you recover your will."
+    },
+    "counter_command": {
+      "label": "Cast Command: Silence. (WIS DC 11)",
+      "success": "queen_double",
+      "failure": "queen_double",
+      "victory": "queen_double",
+      "defeat": "defeat",
+      "spell": "command",
+      "check": {
+        "ability": "WIS",
+        "dc": 11
+      },
+      "failureDamage": 2,
+      "successText": "Your command interrupts hers before it takes hold.",
+      "failureText": "Her voice overpowers yours. You lose the exchange and take 2 fixed damage."
+    },
+    "shield_command": {
+      "label": "Cast Shield of Faith while the command takes hold.",
+      "success": "queen_double",
+      "failure": "queen_double",
+      "victory": "queen_double",
+      "defeat": "defeat",
+      "spell": "shield_of_faith",
+      "retaliation": 2,
+      "successText": "You kneel, but the ward absorbs her strike. You rise as her voice fades."
+    },
+    "read_ripples": {
+      "label": "Identify the real queen by her ripples. (WIS / Perception, DC 10)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "queen_battle",
+      "defeat": "defeat",
+      "check": {
+        "ability": "WIS",
+        "dc": 10,
+        "proficiency": "Perception"
+      },
+      "failureDamage": 1,
+      "successText": "Only one queen disturbs the spring. The unused duplicate fades.",
+      "failureText": "You hesitate before the decoy. Liora clips you for 1 fixed damage, then the duplicate fades."
+    },
+    "break_decoy": {
+      "label": "Strike the decoy. (No enemy damage; take 1 fixed damage.)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "queen_battle",
+      "defeat": "defeat",
+      "retaliation": 1,
+      "successText": "Your strike disperses the decoy. Liora lands a glancing response for 1 fixed damage."
+    },
+    "missile_decoy": {
+      "label": "Disperse the duplicate with Magic Missile. (Costs 1 charge; take 1 fixed damage.)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "queen_battle",
+      "defeat": "defeat",
+      "spell": "magic_missile",
+      "retaliation": 1,
+      "successText": "The bolts strike the magical duplicate and disperse it. This special decoy interaction deals no damage to Liora; her response deals 1 fixed damage."
+    },
+    "queen_battle_attack": {
+      "label": "Attack the Slime Queen with your weapon. (4 fixed damage; AC 11)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "freedom",
+      "defeat": "defeat",
+      "enemy": "queen",
+      "damage": 4,
+      "retaliation": 2,
+      "check": {
+        "ability": "weapon",
+        "proficiency": "weapon",
+        "dc": 11,
+        "targetType": "AC"
+      },
+      "successText": "Your weapon strikes the intended target.",
+      "failureText": "Your strike misses; the enemy responds."
+    },
+    "queen_battle_guiding_bolt": {
+      "label": "Cast Guiding Bolt. (8 fixed damage; AC 11)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "freedom",
+      "defeat": "defeat",
+      "spell": "guiding_bolt",
+      "enemy": "queen",
+      "damage": 8,
+      "retaliation": 2,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "WIS",
+        "dc": 11,
+        "targetType": "AC"
+      }
+    },
+    "queen_battle_shocking_grasp": {
+      "label": "Cast Shocking Grasp. (5 fixed damage; AC 11)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "freedom",
+      "defeat": "defeat",
+      "spell": "shocking_grasp",
+      "enemy": "queen",
+      "damage": 5,
+      "retaliation": 2,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "INT",
+        "dc": 11,
+        "targetType": "AC"
+      }
+    },
+    "queen_battle_magic_missile": {
+      "label": "Cast Magic Missile. (Automatic 5 fixed damage)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "freedom",
+      "defeat": "defeat",
+      "spell": "magic_missile",
+      "enemy": "queen",
+      "damage": 5,
+      "retaliation": 2,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false
+    },
+    "queen_battle_giant": {
+      "label": "Grow for one empowered strike. (CON DC 11; 8 fixed damage)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "freedom",
+      "defeat": "defeat",
+      "spell": "giant",
+      "enemy": "queen",
+      "damage": 8,
+      "retaliation": 2,
+      "successText": "For this one strike you tower above the enemy: 4 base plus 4 bonus fixed damage. You immediately return to normal size.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "CON",
+        "dc": 11,
+        "targetType": "DC"
+      }
+    },
+    "queen_battle_illusory_duplicate": {
+      "label": "Attack behind a duplicate. (WIS DC 11; 4 fixed damage; block response)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "freedom",
+      "defeat": "defeat",
+      "spell": "illusory_duplicate",
+      "enemy": "queen",
+      "damage": 4,
+      "retaliation": 2,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": true,
+      "check": {
+        "ability": "WIS",
+        "dc": 11,
+        "targetType": "DC"
+      }
+    },
+    "queen_battle_ward": {
+      "label": "Cast Shield of Faith. (Block the next damaging event here.)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "queen_battle",
+      "defeat": "defeat",
+      "spell": "shield_of_faith",
+      "successText": "A ward forms. It expires when you leave this encounter."
+    },
+    "sleep_queen": {
+      "label": "Cast Sleep for one opening. (INT DC 12; 4 fixed damage; prevent response; once)",
+      "success": "queen_battle",
+      "failure": "queen_battle",
+      "victory": "freedom",
+      "defeat": "defeat",
+      "spell": "sleep",
+      "check": {
+        "ability": "INT",
+        "dc": 12
+      },
+      "successText": "She briefly sleeps. You cut one binding strand for 4 fixed damage before she wakes; she cannot counter this exchange.",
+      "failureText": "She resists and lashes you for 2 fixed damage. This opening cannot be retried.",
+      "enemy": "queen",
+      "damage": 4,
+      "retaliation": 2,
+      "suppressRetaliation": true,
+      "once": true
+    },
+    "queen_retreat": {
+      "label": "Retreat through the wedged sanctuary door.",
+      "success": "withdrawal",
+      "failure": "withdrawal",
+      "victory": "withdrawal",
+      "defeat": "defeat"
+    },
+    "face_bolt": {
+      "label": "Face the opening spell.",
+      "success": "marshal_bolt",
+      "failure": "marshal_bolt",
+      "victory": "marshal_bolt",
+      "defeat": "defeat"
+    },
+    "leave_cloak": {
+      "label": "Withdraw from the confrontation.",
+      "success": "withdrawal",
+      "failure": "withdrawal",
+      "victory": "withdrawal",
+      "defeat": "defeat"
+    },
+    "dodge_bolt": {
+      "label": "Dive behind the fountain. (DEX / Acrobatics, DC 11; failure: 8 fixed damage)",
+      "success": "marshal_missile",
+      "failure": "marshal_missile",
+      "victory": "marshal_missile",
+      "defeat": "defeat",
+      "check": {
+        "ability": "DEX",
+        "dc": 11,
+        "proficiency": "Acrobatics"
+      },
+      "failureDamage": 8,
+      "successText": "The radiant bolt bursts against the fountain instead of you.",
+      "failureText": "The bolt catches you for 8 fixed damage."
+    },
+    "illusory_duplicate_bolt": {
+      "label": "Cast Illusory Duplicate. (WIS DC 10; failure: 8 fixed damage)",
+      "success": "marshal_missile",
+      "failure": "marshal_missile",
+      "victory": "marshal_missile",
+      "defeat": "defeat",
+      "spell": "illusory_duplicate",
+      "check": {
+        "ability": "WIS",
+        "dc": 10
+      },
+      "failureDamage": 8,
+      "successText": "Your spell prevents the bolt from hitting you.",
+      "failureText": "Your spell fails; the bolt deals 8 fixed damage."
+    },
+    "command_bolt": {
+      "label": "Cast Command. (WIS DC 11; failure: 8 fixed damage)",
+      "success": "marshal_missile",
+      "failure": "marshal_missile",
+      "victory": "marshal_missile",
+      "defeat": "defeat",
+      "spell": "command",
+      "check": {
+        "ability": "WIS",
+        "dc": 11
+      },
+      "failureDamage": 8,
+      "successText": "Your spell prevents the bolt from hitting you.",
+      "failureText": "Your spell fails; the bolt deals 8 fixed damage."
+    },
+    "ward_bolt": {
+      "label": "Cast Shield of Faith. (Block the 8-damage bolt.)",
+      "success": "marshal_missile",
+      "failure": "marshal_missile",
+      "victory": "marshal_missile",
+      "defeat": "defeat",
+      "spell": "shield_of_faith",
+      "retaliation": 8,
+      "successText": "Your ward absorbs the radiant bolt."
+    },
+    "endure_missiles": {
+      "label": "Endure the volley. (5 fixed damage.)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "marshal_battle",
+      "defeat": "defeat",
+      "retaliation": 5,
+      "successText": "The force bolts strike for 5 fixed damage."
+    },
+    "illusory_duplicate_missiles": {
+      "label": "Cast Illusory Duplicate. (WIS DC 10; failure: 5 fixed damage)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "marshal_battle",
+      "defeat": "defeat",
+      "spell": "illusory_duplicate",
+      "check": {
+        "ability": "WIS",
+        "dc": 10
+      },
+      "failureDamage": 5,
+      "successText": "The volley cannot reach you through your spell\u2019s effect.",
+      "failureText": "Your spell fails and the volley deals 5 fixed damage."
+    },
+    "command_missiles": {
+      "label": "Cast Command. (WIS DC 11; failure: 5 fixed damage)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "marshal_battle",
+      "defeat": "defeat",
+      "spell": "command",
+      "check": {
+        "ability": "WIS",
+        "dc": 11
+      },
+      "failureDamage": 5,
+      "successText": "The volley cannot reach you through your spell\u2019s effect.",
+      "failureText": "Your spell fails and the volley deals 5 fixed damage."
+    },
+    "ward_missiles": {
+      "label": "Cast Shield of Faith. (Block the 5-damage volley.)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "marshal_battle",
+      "defeat": "defeat",
+      "spell": "shield_of_faith",
+      "retaliation": 5,
+      "successText": "The force bolts exhaust your ward instead of hurting you."
+    },
+    "marshal_battle_attack": {
+      "label": "Attack the Guild Marshal with your weapon. (4 fixed damage; AC 11)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "embrace",
+      "defeat": "defeat",
+      "enemy": "marshal",
+      "damage": 4,
+      "retaliation": 1,
+      "check": {
+        "ability": "weapon",
+        "proficiency": "weapon",
+        "dc": 11,
+        "targetType": "AC"
+      },
+      "successText": "Your weapon strikes the intended target.",
+      "failureText": "Your strike misses; the enemy responds."
+    },
+    "marshal_battle_guiding_bolt": {
+      "label": "Cast Guiding Bolt. (8 fixed damage; AC 11)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "embrace",
+      "defeat": "defeat",
+      "spell": "guiding_bolt",
+      "enemy": "marshal",
+      "damage": 8,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "WIS",
+        "dc": 11,
+        "targetType": "AC"
+      }
+    },
+    "marshal_battle_shocking_grasp": {
+      "label": "Cast Shocking Grasp. (5 fixed damage; AC 11)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "embrace",
+      "defeat": "defeat",
+      "spell": "shocking_grasp",
+      "enemy": "marshal",
+      "damage": 5,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "INT",
+        "dc": 11,
+        "targetType": "AC"
+      }
+    },
+    "marshal_battle_magic_missile": {
+      "label": "Cast Magic Missile. (Automatic 5 fixed damage)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "embrace",
+      "defeat": "defeat",
+      "spell": "magic_missile",
+      "enemy": "marshal",
+      "damage": 5,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false
+    },
+    "marshal_battle_giant": {
+      "label": "Grow for one empowered strike. (CON DC 11; 8 fixed damage)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "embrace",
+      "defeat": "defeat",
+      "spell": "giant",
+      "enemy": "marshal",
+      "damage": 8,
+      "retaliation": 1,
+      "successText": "For this one strike you tower above the enemy: 4 base plus 4 bonus fixed damage. You immediately return to normal size.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "CON",
+        "dc": 11,
+        "targetType": "DC"
+      }
+    },
+    "marshal_battle_illusory_duplicate": {
+      "label": "Attack behind a duplicate. (WIS DC 11; 4 fixed damage; block response)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "embrace",
+      "defeat": "defeat",
+      "spell": "illusory_duplicate",
+      "enemy": "marshal",
+      "damage": 4,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": true,
+      "check": {
+        "ability": "WIS",
+        "dc": 11,
+        "targetType": "DC"
+      }
+    },
+    "marshal_battle_ward": {
+      "label": "Cast Shield of Faith. (Block the next damaging event here.)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "marshal_battle",
+      "defeat": "defeat",
+      "spell": "shield_of_faith",
+      "successText": "A ward forms. It expires when you leave this encounter."
+    },
+    "command_opening": {
+      "label": "Command: Halt, then strike. (WIS DC 11; 4 fixed damage; prevent response)",
+      "success": "marshal_battle",
+      "failure": "marshal_battle",
+      "victory": "embrace",
+      "defeat": "defeat",
+      "spell": "command",
+      "check": {
+        "ability": "WIS",
+        "dc": 11
+      },
+      "enemy": "marshal",
+      "damage": 4,
+      "retaliation": 1,
+      "suppressRetaliation": true,
+      "successText": "He loses this exchange to your command. Your strike deals 4 fixed damage.",
+      "failureText": "He resists and counters for 1 fixed damage."
+    },
+    "marshal_retreat": {
+      "label": "Break away and abandon the queen\u2019s demand.",
+      "success": "withdrawal",
+      "failure": "withdrawal",
+      "victory": "withdrawal",
+      "defeat": "defeat"
+    },
+    "decline_aid": {
+      "label": "Thank them and continue without first aid.",
+      "success": "path",
+      "failure": "path",
+      "victory": "path",
+      "defeat": "defeat",
+      "flag": "mira_free"
+    },
+    "decline_gift": {
+      "label": "Continue without accepting the extra spell charges.",
+      "success": "marshal",
+      "failure": "marshal",
+      "victory": "marshal",
+      "defeat": "defeat"
+    },
+    "trail_attack": {
+      "label": "Attack the Stairway slime membrane with your weapon. (4 fixed damage; AC 10)",
+      "success": "trail",
+      "failure": "trail",
+      "victory": "gate",
+      "defeat": "defeat",
+      "enemy": "stair_slime",
+      "damage": 4,
+      "retaliation": 1,
+      "check": {
+        "ability": "weapon",
+        "proficiency": "weapon",
+        "dc": 10,
+        "targetType": "AC"
+      },
+      "successText": "Your weapon strikes the intended target.",
+      "failureText": "Your strike misses; the enemy responds."
+    },
+    "trail_guiding_bolt": {
+      "label": "Cast Guiding Bolt. (8 fixed damage; AC 10)",
+      "success": "trail",
+      "failure": "trail",
+      "victory": "gate",
+      "defeat": "defeat",
+      "spell": "guiding_bolt",
+      "enemy": "stair_slime",
+      "damage": 8,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "WIS",
+        "dc": 10,
+        "targetType": "AC"
+      }
+    },
+    "trail_shocking_grasp": {
+      "label": "Cast Shocking Grasp. (5 fixed damage; AC 10)",
+      "success": "trail",
+      "failure": "trail",
+      "victory": "gate",
+      "defeat": "defeat",
+      "spell": "shocking_grasp",
+      "enemy": "stair_slime",
+      "damage": 5,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "INT",
+        "dc": 10,
+        "targetType": "AC"
+      }
+    },
+    "trail_magic_missile": {
+      "label": "Cast Magic Missile. (Automatic 5 fixed damage)",
+      "success": "trail",
+      "failure": "trail",
+      "victory": "gate",
+      "defeat": "defeat",
+      "spell": "magic_missile",
+      "enemy": "stair_slime",
+      "damage": 5,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false
+    },
+    "trail_giant": {
+      "label": "Grow for one empowered strike. (CON DC 11; 8 fixed damage)",
+      "success": "trail",
+      "failure": "trail",
+      "victory": "gate",
+      "defeat": "defeat",
+      "spell": "giant",
+      "enemy": "stair_slime",
+      "damage": 8,
+      "retaliation": 1,
+      "successText": "For this one strike you tower above the enemy: 4 base plus 4 bonus fixed damage. You immediately return to normal size.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": false,
+      "check": {
+        "ability": "CON",
+        "dc": 11,
+        "targetType": "DC"
+      }
+    },
+    "trail_illusory_duplicate": {
+      "label": "Attack behind a duplicate. (WIS DC 11; 4 fixed damage; block response)",
+      "success": "trail",
+      "failure": "trail",
+      "victory": "gate",
+      "defeat": "defeat",
+      "spell": "illusory_duplicate",
+      "enemy": "stair_slime",
+      "damage": 4,
+      "retaliation": 1,
+      "successText": "The spell takes effect.",
+      "failureText": "The spell fails. Its charge is spent, and the enemy responds.",
+      "suppressRetaliation": true,
+      "check": {
+        "ability": "WIS",
+        "dc": 11,
+        "targetType": "DC"
+      }
+    },
+    "trail_ward": {
+      "label": "Cast Shield of Faith. (Block the next damaging event here.)",
+      "success": "trail",
+      "failure": "trail",
+      "victory": "trail",
+      "defeat": "defeat",
+      "spell": "shield_of_faith",
+      "successText": "A ward forms. It expires when you leave this encounter."
+    },
+    "trail_command": {
+      "label": "Command the slime to release its captive. (WIS DC 11)",
+      "success": "gate",
+      "failure": "trail",
+      "victory": "gate",
+      "defeat": "defeat",
+      "spell": "command",
+      "check": {
+        "ability": "WIS",
+        "dc": 11
+      },
+      "failureDamage": 1,
+      "successText": "The membrane opens for a moment. The villager escapes and you pass.",
+      "failureText": "It resists and lashes you for 1 fixed damage."
+    },
+    "trail_retreat": {
+      "label": "Retreat down the mountain.",
+      "success": "withdrawal",
+      "failure": "withdrawal",
+      "victory": "withdrawal",
+      "defeat": "defeat"
+    }
+  },
+  "enemies": {
+    "membrane": {
+      "name": "Possessing slime membrane",
+      "hp": 8,
+      "ac": 10
+    },
+    "queen": {
+      "name": "Slime Queen",
+      "hp": 12,
+      "ac": 11
+    },
+    "marshal": {
+      "name": "Guild Marshal",
+      "hp": 12,
+      "ac": 11
+    },
+    "stair_slime": {
+      "name": "Stairway slime membrane",
+      "hp": 4,
+      "ac": 10
+    }
+  }
+}

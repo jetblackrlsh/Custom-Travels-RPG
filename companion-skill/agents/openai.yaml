@@ -1,0 +1,14 @@
+interface:
+  display_name: Create Custom Travels Adventure
+  short_description: Build offline illustrated solo RPG adventures
+  default_prompt: Create a Custom Travels RPG adventure with honest dice and opportunities
+    for all seven abilities.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

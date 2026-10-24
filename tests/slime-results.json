@@ -1,0 +1,46 @@
+{
+  "runs": 6000,
+  "decisions": 73727,
+  "scenes": 23,
+  "actions": 71,
+  "spells": [
+    "giant",
+    "sleep",
+    "illusory_duplicate",
+    "guiding_bolt",
+    "magic_missile",
+    "comprehend_languages",
+    "shield_of_faith",
+    "command",
+    "shocking_grasp"
+  ],
+  "checksWithBothOutcomes": 35,
+  "endings": {
+    "withdrawal": 4666,
+    "embrace": 162,
+    "freedom": 473,
+    "defeat": 699
+  },
+  "noSpellVictory": {
+    "Cleric": {
+      "refuse_queen": true,
+      "accept_queen": true
+    },
+    "Fighter": {
+      "refuse_queen": true,
+      "accept_queen": true
+    },
+    "Paladin": {
+      "refuse_queen": true,
+      "accept_queen": true
+    },
+    "Rogue": {
+      "refuse_queen": true,
+      "accept_queen": true
+    },
+    "Wizard": {
+      "refuse_queen": true,
+      "accept_queen": true
+    }
+  }
+}

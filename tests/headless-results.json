@@ -1,0 +1,45 @@
+{
+  "groups": 8,
+  "runs": 3000,
+  "decisions": 21374,
+  "visitedScenes": [
+    "arrival",
+    "watchpost",
+    "archive",
+    "spillway",
+    "chamber",
+    "defeat",
+    "lantern",
+    "home",
+    "detour"
+  ],
+  "selectedActions": [
+    "accept",
+    "sleep_hound",
+    "decipher",
+    "dash_crossing",
+    "shocking_grasp",
+    "reassure",
+    "read_magic",
+    "magic_missile",
+    "melee",
+    "climb",
+    "tunnel",
+    "disable",
+    "command_keeper",
+    "sequence",
+    "release",
+    "window",
+    "skip_diagram",
+    "guiding_bolt",
+    "ward_battle",
+    "bypass",
+    "ward_crossing"
+  ],
+  "outcomes": [
+    "success",
+    "failure",
+    "defeat",
+    "victory"
+  ]
+}

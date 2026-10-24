@@ -1,0 +1,42 @@
+{
+  "format": "custom-travels-character",
+  "version": 1,
+  "stats": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 1,
+    "INT": 3,
+    "WIS": 2,
+    "CHA": -1
+  },
+  "background": "A traveler drawn to the troubled village of Valeglass.",
+  "ancestry": "Elf",
+  "weapon": "Dagger",
+  "appearance": {
+    "assetVersion": "studio-1.6-core1",
+    "hairStyle": "long",
+    "outfit": "coat",
+    "build": 1,
+    "beard": false,
+    "glasses": false,
+    "style": {
+      "skin": "#bf8b73",
+      "shirt": "#d86b42",
+      "pants": "#34495e",
+      "shoes": "#263040",
+      "hair": "#292334",
+      "outline": "#192131",
+      "eye": "#212738"
+    }
+  },
+  "name": "Zana Splode",
+  "profile": "mystic",
+  "proficiencies": [
+    "Arcana",
+    "History",
+    "Investigation"
+  ],
+  "spells": [
+    "magic_missile"
+  ]
+}

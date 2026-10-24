@@ -1,0 +1,376 @@
+{
+  "id": "lantern-under-the-flood",
+  "version": 1,
+  "title": "The Lantern Under the Flood",
+  "summary": "A storm threatens the valley. Recover an ancient signal lantern and open the floodgate before the lower village is lost.",
+  "supportedAbilities": [
+    "guiding_bolt",
+    "shocking_grasp",
+    "magic_missile",
+    "shield_of_faith",
+    "command",
+    "sleep",
+    "comprehend_languages"
+  ],
+  "entry": "arrival",
+  "enemies": {
+    "warden": {
+      "name": "Brass Warden",
+      "hp": 12,
+      "ac": 12
+    }
+  },
+  "nodes": {
+    "arrival": {
+      "title": "Rain over Lowwater",
+      "text": "Rain drums on the rooftops of Lowwater. A floodgate has jammed upstream, and its keeper has not returned. Mara, the village carpenter, asks you to bring back the signal lantern from the old pump house. Its light will show the rescue boats a safe route. You have one evening, a sturdy weapon, and whatever talents you brought.",
+      "background": "medieval-village",
+      "npc": "traveler",
+      "actions": [
+        "accept"
+      ]
+    },
+    "watchpost": {
+      "title": "The frightened watch",
+      "text": "At the watchpost, a frightened keeper clings to a brake chain. His barking hound blocks the narrow stair. He fears that releasing his grip will flood the village, but the chain merely locks the maintenance door. You can calm him, distract the hound, or climb around the building.",
+      "background": "medieval-village",
+      "npc": "guard",
+      "actions": [
+        "sleep_hound",
+        "command_keeper",
+        "reassure",
+        "climb"
+      ]
+    },
+    "detour": {
+      "title": "The hillside path",
+      "text": "The longer route costs precious time, but the hillside is passable. You arrive at a low window into the old archive. Nobody needs magic to get through this way.",
+      "background": "pine-forest",
+      "npc": "traveler",
+      "actions": [
+        "window"
+      ]
+    },
+    "archive": {
+      "title": "Words beneath the dust",
+      "text": "An old flood-control diagram covers the archive wall. Its labels are in an unfamiliar language. A sketch shows a brass guardian, three levers, and a lantern. Understanding the markings could help you avoid danger below.",
+      "background": "library",
+      "npc": "scholar",
+      "actions": [
+        "read_magic",
+        "decipher",
+        "skip_diagram"
+      ]
+    },
+    "spillway": {
+      "title": "Stone and rushing water",
+      "text": "The spillway is collapsing. Falling stones strike the only direct crossing. A protective spell could shelter you; otherwise you can time your dash or use a longer maintenance tunnel.",
+      "background": "stone-bridge",
+      "npc": "guard",
+      "actions": [
+        "ward_crossing",
+        "dash_crossing",
+        "tunnel"
+      ]
+    },
+    "chamber": {
+      "title": "The Brass Warden",
+      "text": "The signal lantern glows behind a brass guardian. Its cracked voice repeats: “Unauthorized release.” You can use the sequence, disable its mechanism, fight, or find a bypass. The warden has 12 HP and AC 12. Its counterattack rolls 1d4 + 1 damage.",
+      "background": "dungeon",
+      "npc": "warden",
+      "actions": [
+        "sequence",
+        "disable",
+        "melee",
+        "guiding_bolt",
+        "shocking_grasp",
+        "magic_missile",
+        "ward_battle",
+        "bypass"
+      ]
+    },
+    "lantern": {
+      "title": "A light worth carrying",
+      "text": "You lift the signal lantern from its cradle. Beyond its cage, a manual wheel opens the floodgate. The mechanism is stiff, but a long lever beside it lets you move it without a strength check. The water begins to drain.",
+      "background": "dungeon",
+      "npc": "traveler",
+      "actions": [
+        "release"
+      ]
+    },
+    "home": {
+      "title": "The boats find their way",
+      "text": "{flag(\"late\"):By the time your lantern shines over Lowwater, the lowest cellars have flooded. Your warning guides the remaining rescue boats safely home.|Your lantern shines over Lowwater before the flood reaches its lowest houses. The rescue boats follow your warning and everyone gets clear.} You opened the floodgate and returned with the signal. Your choices, injuries, and spent charges remain in the journal.",
+      "background": "medieval-village",
+      "npc": "traveler",
+      "actions": []
+    },
+    "defeat": {
+      "title": "Carried out of the storm",
+      "text": "Your strength gives out. The rescue crew finds you and carries you to shelter, but you cannot finish the mission tonight. This is a genuine failed attempt, not a secretly adjusted roll. Start a new adventure run to try another approach.",
+      "background": "medieval-village",
+      "npc": "traveler",
+      "actions": []
+    }
+  },
+  "actions": {
+    "accept": {
+      "label": "Take the uphill path.",
+      "success": "watchpost",
+      "failure": "watchpost",
+      "victory": "watchpost",
+      "defeat": "defeat"
+    },
+    "sleep_hound": {
+      "label": "Cast Sleep on the hound.",
+      "spell": "sleep",
+      "check": {
+        "ability": "INT",
+        "dc": 11
+      },
+      "successText": "The hound curls into a quiet sleep. You guide the keeper away from the chain and enter.",
+      "failureText": "The hound shakes off your magic. You must find another approach.",
+      "once": true,
+      "success": "archive",
+      "failure": "watchpost",
+      "victory": "archive",
+      "defeat": "defeat"
+    },
+    "command_keeper": {
+      "label": "Use Command: release the chain.",
+      "spell": "command",
+      "check": {
+        "ability": "WIS",
+        "dc": 11
+      },
+      "successText": "The keeper releases his grip. The maintenance door swings open.",
+      "failureText": "Panic overcomes your command. He clings tighter.",
+      "once": true,
+      "success": "archive",
+      "failure": "watchpost",
+      "victory": "archive",
+      "defeat": "defeat"
+    },
+    "reassure": {
+      "label": "Explain the brake mechanism calmly.",
+      "check": {
+        "ability": "CHA",
+        "proficiency": "Persuasion",
+        "dc": 11
+      },
+      "successText": "Your explanation gives him courage. He opens the maintenance door.",
+      "failureText": "He cannot hear you over the storm. You take the longer path around the wall.",
+      "success": "archive",
+      "failure": "detour",
+      "victory": "archive",
+      "defeat": "defeat"
+    },
+    "climb": {
+      "label": "Climb around the watchpost.",
+      "check": {
+        "ability": "STR",
+        "proficiency": "Athletics",
+        "dc": 10
+      },
+      "failureDamage": 2,
+      "successText": "You climb safely to the open maintenance window.",
+      "failureText": "A loose stone gives way. You lose 2 HP but catch the window ledge.",
+      "success": "archive",
+      "failure": "archive",
+      "victory": "archive",
+      "defeat": "defeat"
+    },
+    "window": {
+      "label": "Enter the archive.",
+      "success": "archive",
+      "failure": "archive",
+      "victory": "archive",
+      "defeat": "defeat"
+    },
+    "read_magic": {
+      "label": "Cast Comprehend Languages on the diagram.",
+      "spell": "comprehend_languages",
+      "flag": "safe_sequence",
+      "successText": "The labels become clear: sound the warning bell, lift the blue lever, then turn the white wheel. The guardian recognizes this sequence.",
+      "success": "spillway",
+      "failure": "spillway",
+      "victory": "spillway",
+      "defeat": "defeat"
+    },
+    "decipher": {
+      "label": "Compare the drawings and mechanisms.",
+      "check": {
+        "ability": "INT",
+        "proficiency": "Investigation",
+        "dc": 12
+      },
+      "flag": "safe_sequence",
+      "successText": "You work out the safe sequence and commit it to memory.",
+      "failureText": "The diagram remains uncertain. You continue without the sequence.",
+      "success": "spillway",
+      "failure": "spillway",
+      "victory": "spillway",
+      "defeat": "defeat"
+    },
+    "skip_diagram": {
+      "label": "Leave the diagram and follow the channel.",
+      "successText": "You trust your judgment and follow the water channel.",
+      "success": "spillway",
+      "failure": "spillway",
+      "victory": "spillway",
+      "defeat": "defeat"
+    },
+    "ward_crossing": {
+      "label": "Cast Shield of Faith and cross.",
+      "spell": "shield_of_faith",
+      "retaliation": 4,
+      "successText": "A luminous ward turns the falling stones aside. You cross unharmed.",
+      "success": "chamber",
+      "failure": "chamber",
+      "victory": "chamber",
+      "defeat": "defeat"
+    },
+    "dash_crossing": {
+      "label": "Time a dash between falling stones.",
+      "check": {
+        "ability": "DEX",
+        "proficiency": "Acrobatics",
+        "dc": 12
+      },
+      "failureDamage": "1d4",
+      "successText": "You reach the far side between two crashes.",
+      "failureText": "A stone clips you. You reach the far side, bruised but moving.",
+      "success": "chamber",
+      "failure": "chamber",
+      "victory": "chamber",
+      "defeat": "defeat"
+    },
+    "tunnel": {
+      "label": "Take the slower maintenance tunnel.",
+      "flag": "late",
+      "successText": "You avoid the stones, but water is already rising in the village.",
+      "success": "chamber",
+      "failure": "chamber",
+      "victory": "chamber",
+      "defeat": "defeat"
+    },
+    "sequence": {
+      "label": "Perform the safe sequence.",
+      "requiresFlag": "safe_sequence",
+      "successText": "The warden lowers its arms and opens the lantern cage.",
+      "success": "lantern",
+      "failure": "lantern",
+      "victory": "lantern",
+      "defeat": "defeat"
+    },
+    "disable": {
+      "label": "Disconnect the warden’s drive chain.",
+      "check": {
+        "ability": "DEX",
+        "proficiency": "Thieves' Tools",
+        "dc": 12
+      },
+      "failureDamage": 3,
+      "once": true,
+      "successText": "The drive chain drops loose. The machine powers down.",
+      "failureText": "The chain snaps back and strikes you for 3 fixed damage.",
+      "success": "lantern",
+      "failure": "chamber",
+      "victory": "lantern",
+      "defeat": "defeat"
+    },
+    "melee": {
+      "label": "Attack with your starting weapon.",
+      "enemy": "warden",
+      "check": {
+        "ability": "weapon",
+        "proficiency": "weapon",
+        "dc": 12,
+        "targetType": "AC"
+      },
+      "damage": 4,
+      "retaliation": "1d4+1",
+      "victory": "lantern",
+      "successText": "Your weapon strikes the brass casing for 4 fixed damage.",
+      "failureText": "Your attack glances off the casing.",
+      "success": "chamber",
+      "failure": "chamber",
+      "defeat": "defeat"
+    },
+    "guiding_bolt": {
+      "label": "Cast Guiding Bolt.",
+      "spell": "guiding_bolt",
+      "enemy": "warden",
+      "check": {
+        "ability": "WIS",
+        "dc": 12,
+        "targetType": "AC"
+      },
+      "damage": 8,
+      "retaliation": "1d4+1",
+      "victory": "lantern",
+      "successText": "Guiding Bolt strikes the warden for 8 fixed damage.",
+      "failureText": "Your spell misses the warden.",
+      "success": "chamber",
+      "failure": "chamber",
+      "defeat": "defeat"
+    },
+    "shocking_grasp": {
+      "label": "Cast Shocking Grasp.",
+      "spell": "shocking_grasp",
+      "enemy": "warden",
+      "check": {
+        "ability": "INT",
+        "dc": 12,
+        "targetType": "AC"
+      },
+      "damage": 5,
+      "retaliation": "1d4+1",
+      "victory": "lantern",
+      "successText": "Shocking Grasp strikes the warden for 5 fixed damage.",
+      "failureText": "Your spell misses the warden.",
+      "success": "chamber",
+      "failure": "chamber",
+      "defeat": "defeat"
+    },
+    "magic_missile": {
+      "label": "Cast Magic Missile.",
+      "spell": "magic_missile",
+      "enemy": "warden",
+      "damage": 5,
+      "retaliation": "1d4+1",
+      "victory": "lantern",
+      "successText": "Magic Missile strikes the warden for 5 fixed damage.",
+      "failureText": "Your spell misses the warden.",
+      "success": "chamber",
+      "failure": "chamber",
+      "defeat": "defeat"
+    },
+    "ward_battle": {
+      "label": "Cast Shield of Faith before your next attack.",
+      "spell": "shield_of_faith",
+      "once": true,
+      "successText": "Your ward will stop the next damaging event in this chamber.",
+      "success": "chamber",
+      "failure": "chamber",
+      "victory": "chamber",
+      "defeat": "defeat"
+    },
+    "bypass": {
+      "label": "Retreat and use the inspection passage.",
+      "flag": "late",
+      "successText": "You leave the warden behind and squeeze through a long service passage. It leads behind the lantern cage, but costs time.",
+      "success": "lantern",
+      "failure": "lantern",
+      "victory": "lantern",
+      "defeat": "defeat"
+    },
+    "release": {
+      "label": "Open the floodgate and carry the lantern home.",
+      "success": "home",
+      "failure": "home",
+      "victory": "home",
+      "defeat": "defeat"
+    }
+  }
+}
