@@ -9,7 +9,7 @@ An illustrated, SRD-inspired solo gamebook engine. Bring the same custom travele
 3. Choose a premade or build your traveler, review adventure ability coverage, and begin.
 4. Use **Export character** and **Export save** to transfer to another computer. Browser storage is only a convenience.
 
-This is the **0.2.0 open-source alpha**. Select either included adventure on the welcome screen. See docs/TEST-REPORT.md for tested behavior and remaining live-browser/cross-platform verification limits.
+This is the **0.2.1 open-source alpha**. Select either included adventure on the welcome screen. See docs/TEST-REPORT.md for tested behavior and remaining live-browser/cross-platform verification limits.
 
 ## Included
 
@@ -66,3 +66,8 @@ The 0.1.3 visual pass is documented in docs/VISUAL-STAGING.md. It leaves the adv
 
 ### 0.1.4 visual update
 All 37 starting weapons have explicit, distinct original SVG artwork and weapon-family attack poses. No unknown selection silently becomes a sword. Weapons are displayed for relevant weapon attacks, not during unrelated dialogue or spell gestures. Existing version-1 characters and saves remain compatible; combat arithmetic is unchanged.
+
+## 0.2.1: Delayed Charged Strike
+Prepare for one turn, taking the enemy response, then gain +4 fixed bonus damage on your next weapon hit in that encounter. A miss spends the preparation; no stacking. The engine supplies it automatically alongside eligible weapon attacks, including in older imported adventures. See docs/CHARGED-STRIKE.md for rules and save compatibility. The release retains GPL-3.0-only and all existing third-party notices.
+
+The updated companion skill requires multiple genuinely distinct nonmagical progression approaches for future adventures. Existing story obstacles have not been rewritten in this mechanics update.

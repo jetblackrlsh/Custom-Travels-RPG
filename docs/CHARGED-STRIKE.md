@@ -1,0 +1,8 @@
+# Delayed Charged Strike: core combat action
+Engine 0.2.1 supplies this action automatically whenever a currently offered nonspell weapon attack targets a living enemy. No adventure edits, extra Ink branches, character ability pick, spell charge or author opt-in are required. Existing imported adventures work unchanged. Core action IDs are core_prepare_strike: followed by the offered weapon-action ID; clients should select the exact view().choices ID.
+
+Preparation consumes a turn, deals no damage and takes the normal response from the offered weapon attack. If that attack has no retaliation, preparation has none either. Your next weapon attack against that enemy in the same scene gains +4 fixed damage if it hits. A miss consumes it. No stacking. Spells cannot gain this bonus. Other actions retain the charge, but leaving the scene, defeating the enemy or player defeat clears it. Ward rules still apply. If preparation reduces HP to zero, the engine immediately routes to the weapon action's authored defeat ending.
+
+Browser and headless use one implementation. Ordinary Ink choices are unchanged. Save/character formats stay version 1, old saves lacking chargedStrike restore uncharged, and adventure IDs/versions remain unchanged. Charged preparation is persisted and validated. Version 0.2.1 retains the established GPL-3.0-only license.
+
+Two turns preparing and landing an 8-damage strike match two normal 4-damage hits; a miss wastes setup. Burst damage can prevent a later counterattack, but preparation can kill a wounded traveler. Policy-dependent balance tests are not proof that either choice is always optimal.

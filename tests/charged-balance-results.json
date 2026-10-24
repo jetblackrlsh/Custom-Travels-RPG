@@ -1,0 +1,95 @@
+{
+  "runs": [
+    {
+      "build": "Cleric",
+      "policy": "basic",
+      "samples": 500,
+      "wins": 259,
+      "winRate": 51.8,
+      "meanSurvivingHP": 2.17,
+      "preparations": 0
+    },
+    {
+      "build": "Cleric",
+      "policy": "selective-charge",
+      "samples": 500,
+      "wins": 260,
+      "winRate": 52,
+      "meanSurvivingHP": 2.44,
+      "preparations": 1217
+    },
+    {
+      "build": "Fighter",
+      "policy": "basic",
+      "samples": 500,
+      "wins": 461,
+      "winRate": 92.2,
+      "meanSurvivingHP": 4.9,
+      "preparations": 0
+    },
+    {
+      "build": "Fighter",
+      "policy": "selective-charge",
+      "samples": 500,
+      "wins": 444,
+      "winRate": 88.8,
+      "meanSurvivingHP": 5.11,
+      "preparations": 1244
+    },
+    {
+      "build": "Paladin",
+      "policy": "basic",
+      "samples": 500,
+      "wins": 395,
+      "winRate": 79,
+      "meanSurvivingHP": 3.44,
+      "preparations": 0
+    },
+    {
+      "build": "Paladin",
+      "policy": "selective-charge",
+      "samples": 500,
+      "wins": 382,
+      "winRate": 76.4,
+      "meanSurvivingHP": 3.71,
+      "preparations": 1223
+    },
+    {
+      "build": "Rogue",
+      "policy": "basic",
+      "samples": 500,
+      "wins": 263,
+      "winRate": 52.6,
+      "meanSurvivingHP": 2.12,
+      "preparations": 0
+    },
+    {
+      "build": "Rogue",
+      "policy": "selective-charge",
+      "samples": 500,
+      "wins": 286,
+      "winRate": 57.2,
+      "meanSurvivingHP": 2.26,
+      "preparations": 1155
+    },
+    {
+      "build": "Wizard",
+      "policy": "basic",
+      "samples": 500,
+      "wins": 245,
+      "winRate": 49,
+      "meanSurvivingHP": 2.13,
+      "preparations": 0
+    },
+    {
+      "build": "Wizard",
+      "policy": "selective-charge",
+      "samples": 500,
+      "wins": 254,
+      "winRate": 50.8,
+      "meanSurvivingHP": 2.35,
+      "preparations": 1208
+    }
+  ],
+  "note": "Seeded QA only. Identical refusal route, no spells, full healing, basic attack versus charge when target has 8+ HP and preparation is survivable. No player outcomes altered."
+}

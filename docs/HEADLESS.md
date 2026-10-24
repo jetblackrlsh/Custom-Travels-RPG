@@ -33,3 +33,6 @@ Use `Game`, `validateCharacter`, `view`, `choose`, `save`, and `Game.restore` as
 The journal contains action ID/label/scene, charge cost, success/outcome, resulting HP/charges and, when relevant, check arithmetic, damage formula/dice, retaliation, enemy HP, and blocked damage. Read these fields rather than inferring mechanics from prose. No network telemetry is required by the game.
 
 New discovery commands in 0.1.1: `help`, `version`, `catalog`, and `validate-character CHARACTER.json`. See AGENT-QUICKSTART.md for exit codes, errors, working-directory behavior, concurrency, and the runnable agent example.
+
+## Core combat preparation (0.2.1)
+Delayed Charged Strike appears automatically with eligible weapon attacks, including in imported older adventures. Choose it from the current choices list, accept the enemy response, then make a weapon attack for +4 fixed bonus damage on a hit. Misses consume preparation; no stacking; it clears on leaving the encounter. The ready state persists through save/resume. Core choices have index:null and core:true; select by exact ID, never by Ink index. See CHARGED-STRIKE.md.

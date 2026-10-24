@@ -1,25 +1,25 @@
 {
   "runs": 6000,
-  "decisions": 73727,
+  "decisions": 76832,
   "scenes": 23,
   "actions": 71,
   "spells": [
     "giant",
-    "sleep",
-    "illusory_duplicate",
-    "guiding_bolt",
     "magic_missile",
-    "comprehend_languages",
+    "illusory_duplicate",
     "shield_of_faith",
-    "command",
-    "shocking_grasp"
+    "guiding_bolt",
+    "comprehend_languages",
+    "shocking_grasp",
+    "sleep",
+    "command"
   ],
   "checksWithBothOutcomes": 35,
   "endings": {
-    "withdrawal": 4666,
-    "embrace": 162,
-    "freedom": 473,
-    "defeat": 699
+    "withdrawal": 4428,
+    "defeat": 987,
+    "freedom": 424,
+    "embrace": 161
   },
   "noSpellVictory": {
     "Cleric": {

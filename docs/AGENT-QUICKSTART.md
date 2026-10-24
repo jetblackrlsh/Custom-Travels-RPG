@@ -54,3 +54,6 @@ The JS API accepts `{testSeed: integer}` only for marked test sessions. Such ses
 ## What the API does not promise
 
 This is not an unrestricted tabletop simulation. Actions, spells, targets, checks, and branches are authored. No free-text action parser, initiative scheduler, levels, inventory simulation, spell-slot tiers, concurrent campaigns server, or network service exists. Any valid character can enter any valid adventure, but its abilities may not all have authored opportunities; review `supportedAbilities` first.
+
+## Core combat preparation (0.2.1)
+Delayed Charged Strike appears automatically with eligible weapon attacks, including in imported older adventures. Choose it from the current choices list, accept the enemy response, then make a weapon attack for +4 fixed bonus damage on a hit. Misses consume preparation; no stacking; it clears on leaving the encounter. The ready state persists through save/resume. Core choices have index:null and core:true; select by exact ID, never by Ink index. See CHARGED-STRIKE.md.

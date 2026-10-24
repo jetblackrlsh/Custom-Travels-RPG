@@ -1,0 +1,88 @@
+{
+  "format": "custom-travels-save",
+  "version": 1,
+  "adventureId": "the-slime-queens-offer",
+  "adventureVersion": 1,
+  "character": {
+    "format": "custom-travels-character",
+    "version": 1,
+    "stats": {
+      "STR": 3,
+      "DEX": 2,
+      "CON": 2,
+      "INT": 0,
+      "WIS": 1,
+      "CHA": -1
+    },
+    "background": "Soldier: a former bridge guard seeking useful work.",
+    "ancestry": "Elf",
+    "weapon": "Longsword",
+    "appearance": {
+      "assetVersion": "studio-1.6-core1",
+      "hairStyle": "ponytail",
+      "outfit": "armor",
+      "build": 1,
+      "beard": false,
+      "glasses": false,
+      "style": {
+        "skin": "#8b573e",
+        "shirt": "#66849a",
+        "pants": "#34495e",
+        "shoes": "#263040",
+        "hair": "#292334",
+        "outline": "#192131",
+        "eye": "#212738"
+      }
+    },
+    "name": "Fighter",
+    "profile": "sturdy",
+    "proficiencies": [
+      "Athletics",
+      "Acrobatics",
+      "Survival"
+    ],
+    "spells": []
+  },
+  "state": {
+    "hp": 12,
+    "maxHP": 12,
+    "charges": 0,
+    "maxCharges": 0,
+    "boons": {},
+    "enemies": {},
+    "flags": {},
+    "ward": null,
+    "used": [],
+    "log": [
+      {
+        "id": "accept",
+        "label": "Accept the commission and travel to Valeglass.",
+        "scene": "guild",
+        "spell": null,
+        "chargeCost": 0,
+        "success": true,
+        "hp": 12,
+        "charges": 0,
+        "outcome": "success",
+        "text": "You succeed."
+      },
+      {
+        "id": "approach",
+        "label": "Approach the moving membrane carefully.",
+        "scene": "village",
+        "spell": null,
+        "chargeCost": 0,
+        "success": true,
+        "hp": 12,
+        "charges": 0,
+        "outcome": "success",
+        "text": "You succeed."
+      }
+    ],
+    "scene": "membrane"
+  },
+  "ink": "{\"flows\":{\"DEFAULT_FLOW\":{\"callstack\":{\"threads\":[{\"callstack\":[{\"exp\":false,\"type\":0}],\"threadIndex\":2,\"previousContentObject\":\"membrane.0.121\"}],\"threadCounter\":5},\"outputStream\":[\"#\",\"^scene:membrane\",\"/#\",\"^The slime lashes at anyone who reaches for Mira. Cut or disrupt the outer membrane, not the woman inside it. Its AC is 10 and it has 8 HP. Each surviving response deals 1 fixed damage.\",\"\\n\"],\"choiceThreads\":{\"4\":{\"callstack\":[{\"cPath\":\"membrane.0\",\"idx\":17,\"exp\":false,\"type\":0}],\"threadIndex\":4,\"previousContentObject\":\"membrane.0.16\"},\"5\":{\"callstack\":[{\"cPath\":\"membrane.0\",\"idx\":121,\"exp\":false,\"type\":0}],\"threadIndex\":5,\"previousContentObject\":\"membrane.0.120\"}},\"currentChoices\":[{\"text\":\"Attack the Possessing slime membrane with your weapon. (4 fixed damage; AC 10)\",\"index\":0,\"originalChoicePath\":\"membrane.0.17\",\"originalThreadIndex\":4,\"targetPath\":\"membrane.0.c-0\",\"isInvisibleDefault\":false,\"tags\":[\"action:membrane_attack\"]},{\"text\":\"Retreat and guide the baker away from the square.\",\"index\":1,\"originalChoicePath\":\"membrane.0.121\",\"originalThreadIndex\":5,\"targetPath\":\"membrane.0.c-8\",\"isInvisibleDefault\":false,\"tags\":[\"action:retreat_membrane\"]}]}},\"currentFlowName\":\"DEFAULT_FLOW\",\"variablesState\":{\"result\":1},\"evalStack\":[],\"visitCounts\":{},\"turnIndices\":{},\"turnIdx\":1,\"storySeed\":92,\"previousRandom\":0,\"inkSaveVersion\":10,\"inkFormatVersion\":21}",
+  "text": [
+    "The slime lashes at anyone who reaches for Mira. Cut or disrupt the outer membrane, not the woman inside it. Its AC is 10 and it has 8 HP. Each surviving response deals 1 fixed damage."
+  ]
+}

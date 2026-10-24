@@ -39,3 +39,6 @@ Export a character to preserve their build, background, appearance recipe, weapo
 Local browser storage may be disabled or isolated for file URLs; exported files remain the reliable backup. An imported adventure pack is authored content, not a security-audited plugin: use packs from sources you trust. No adventure file should request network access or contain external assets.
 
 Adventures may grant temporary ability charges as a story reward. These are displayed separately, spent before eligible personal charges, saved with the adventure, and never added to the exported character. New ability IDs require engine 0.2.0 or later; older engines reject unknown IDs rather than silently changing them.
+
+## Core combat preparation (0.2.1)
+Delayed Charged Strike appears automatically with eligible weapon attacks, including in imported older adventures. Choose it from the current choices list, accept the enemy response, then make a weapon attack for +4 fixed bonus damage on a hit. Misses consume preparation; no stacking; it clears on leaving the encounter. The ready state persists through save/resume. Core choices have index:null and core:true; select by exact ID, never by Ink index. See CHARGED-STRIKE.md.

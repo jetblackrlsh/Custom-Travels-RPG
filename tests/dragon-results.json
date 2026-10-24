@@ -9,16 +9,16 @@
     }
   },
   "mixedRuns": 4000,
-  "mixedDecisions": 53384,
+  "mixedDecisions": 55972,
   "visitedScenes": 19,
   "selectedActions": 47,
   "spellsUsed": [
-    "shield_of_faith",
     "shocking_grasp",
+    "shield_of_faith",
     "comprehend_languages",
+    "sleep",
     "magic_missile",
     "guiding_bolt",
-    "sleep",
     "command"
   ],
   "checksWithBothOutcomes": 20

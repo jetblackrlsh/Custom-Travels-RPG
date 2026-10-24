@@ -31,7 +31,7 @@ Damage formulas support 1–20 dice, 2–100 sides, optional integer modifier. F
 
 Declare exactly the abilities with authored opportunities. Every listed opportunity must be reachable with a valid character and sufficient charges, not merely present in dead text. Jet's authored adventures must cover all seven abilities. This is an authoring standard, not a reason to reject third-party adventures that truthfully advertise fewer.
 
-Review each obstacle for plausible magic and ordinary alternatives. Do not force unrelated spells into a scene. No mandatory obstacle may require a spell or remaining charge. This guarantees participation, not victory: failures and defeat are legitimate outcomes. Some proficiencies may never arise; do not reject a character for that.
+Review each obstacle for plausible magic and ordinary alternatives. Do not force unrelated spells into a scene. No obstacle may require a spell or remaining charge. This guarantees participation, not victory: failures and defeat are legitimate outcomes. Some proficiencies may never arise; do not reject a character for that.
 
 Keep spell consequences meaningful and bounded. Avoid limitless Sleep against every target, unlimited healing retries, or claiming that Persuasion is literal mind control. Let routes reconverge when their changes are represented in HP, charges, flags, information, or later consequences. Charge recovery is not implemented as a generic author field in v0.1; add and test it deliberately if later needed.
 
@@ -52,3 +52,9 @@ Structural checks cannot prove narrative eligibility or exhaustive semantic reac
 
 ## 0.2.0 additions
 See SLIME-QUEEN.md for Giant, Illusory Duplicate, suppressRetaliation and bounded grantBoon. Author all nine abilities for owner-requested adventures unless a narrower scope is explicit. Existing adventures may truthfully declare only their original seven. Do not claim every route supports every ability.
+
+## Meaningful non-magical choices (Opal playtest, October 24, 2026)
+At every problem or obstacle, including optional ones, offer at least two distinct non-magical approaches that can advance the adventure for a zero-spell, zero-charge character. Retreat alone does not count as a second progression method. Transition/continue buttons and already-selected outcome acknowledgements are exempt. Different wording for the same roll/outcome does not count: vary ability/proficiency, resource cost, information, timing or consequences. Do not require proficiency ownership simply to attempt an ordinary skill check; proficiency adds its bonus. Include physical, observational, social or equipment-based alternatives where plausible, not token options that contradict the scene. Failure must have honest consequences. Review the actual available-choice list with no magic and depleted resources, not only the full manifest.
+In combat, provide meaningful non-magical tactical decisions as well as basic attack and withdrawal. Charged Strike is one supported example, not a replacement for obstacle-specific design. Player tension and agency are separate acceptance criteria: Opal won at 1/8 HP but too often had only one forward action. Do not mistake danger for interesting choice.
+
+Delayed Charged Strike is a core engine combat action in 0.2.1, automatically exposed alongside eligible weapon attacks; do not add per-adventure preparation actions. It supplements, but does not replace, the requirement for multiple ordinary solutions to every problem.
